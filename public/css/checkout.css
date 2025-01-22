@@ -1,0 +1,21 @@
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.alert-text {
+  color: #fe4c50;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.required {
+  color: red;
+}
+
+.error-text {
+  color: #fe4c50;
+}

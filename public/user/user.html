@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>soar</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="fake EC Site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/user.css" />
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="super_container">
+      <!-- Header -->
+
+      <header class="header trans_300">
+        <!-- Main Navigation -->
+
+        <div class="main_nav_container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-right">
+                <div class="logo_container">
+                  <a href="../index.html">soar</a>
+                </div>
+                <nav class="navbar">
+                  <ul class="navbar_user">
+                    <li>
+                      <form
+                        class="d-flex search-form"
+                        action="../product/product-list.html"
+                        method="get"
+                      >
+                        <input
+                          class="form-control me-2 search-input"
+                          type="text"
+                          name="keyword"
+                          aria-label="Search"
+                        />
+                        <button class="btn btn-danger search-btn" type="submit">
+                          Search
+                        </button>
+                      </form>
+                    </li>
+                    <li>
+                      <a href="#" class="api-link">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="checkout">
+                      <a href="../cart/cart.html">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="hamburger_container">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="fs_menu_overlay"></div>
+      <div class="hamburger_menu">
+        <div class="hamburger_close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="hamburger_menu_content text-right">
+          <ul class="menu_top_nav">
+            <li class="menu_item has-children">
+              <a href="#">
+                WOMAN
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="menu_selection">
+                <li>
+                  <a href="../product/product-list.html?gender=women">すべて</a>
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=outer"
+                    >アウター</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=tops"
+                    >トップス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=bottoms"
+                    >ボトムス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=onepiece"
+                    >ワンピース・セットアップ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=pajama"
+                    >ルームウェア</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=shoes"
+                    >シューズ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=women&category=accesary"
+                    >アクセサリー</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item has-children">
+              <a href="#">
+                MAN
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="menu_selection">
+                <li>
+                  <a href="../product/product-list.html?gender=men">すべて</a>
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=outer"
+                    >アウター</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=tops"
+                    >トップス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=bottoms"
+                    >ボトムス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=suit"
+                    >セットアップ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=pajama"
+                    >ルームウェア</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=shoes"
+                    >シューズ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=men&category=accesary"
+                    >アクセサリー</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item has-children">
+              <a href="#">
+                KIDS
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="menu_selection">
+                <li>
+                  <a href="../product/product-list.html?gender=kids">すべて</a>
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=outer"
+                    >アウター</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=tops"
+                    >トップス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=bottoms"
+                    >ボトムス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=onepiece"
+                    >ワンピース・サロペット</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=pajama"
+                    >ルームウェア</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=shoes"
+                    >シューズ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../product/product-list.html?gender=kids&category=accesary"
+                    >アクセサリー</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="user-container">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="card user-card">
+              <div class="card-body justify-content-center">
+                <h2 class="title">Member Profile</h2>
+                <!-- アコーディオン -->
+                <div class="accordion" id="accordionExample">
+                  <!-- 会員情報セクション -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        会員情報
+                      </button>
+                    </h5>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <form id="userForm">
+                          <!-- 名前とメール（変更不可） -->
+                          <div class="form-group">
+                            <label for="name">User Name</label>
+                            <input
+                              type="text"
+                              class="form-control user-form"
+                              id="name"
+                              value=""
+                              disabled
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                              type="email"
+                              class="form-control user-form"
+                              id="email"
+                              value=""
+                              disabled
+                            />
+                          </div>
+
+                          <!-- 住所（日本式） -->
+                          <div class="form-group row">
+                            <div class="col-md-3">
+                              <label for="postalCode">Postal Code</label>
+                              <input
+                                type="text"
+                                class="form-control user-form"
+                                id="postalCode"
+                                value=""
+                                placeholder="×××-××××"
+                                required
+                              />
+                            </div>
+                            <div class="col-md-9">
+                              <label for="address">Address</label>
+                              <input
+                                type="text"
+                                class="form-control user-form"
+                                id="address"
+                                value=""
+                                placeholder="東京都渋谷区1-1-1"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <!-- 性別 -->
+                          <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select class="form-control user-form" id="gender">
+                              <option value="male">男性</option>
+                              <option value="female">女性</option>
+                              <option value="other" selected>---</option>
+                            </select>
+                          </div>
+
+                          <!-- 生年月日 -->
+                          <div class="form-group">
+                            <label for="birthdate">Birth Date</label>
+                            <input
+                              type="date"
+                              class="form-control user-form"
+                              id="birthdate"
+                              value=""
+                              placeholder="1990-01-01"
+                              required
+                            />
+                          </div>
+                          <!-- 更新ボタン -->
+                          <div class="update-outer">
+                            <button
+                              type="submit"
+                              class="btn btn-danger btn-lg update-btn"
+                            >
+                              更新
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ご注文履歴セクション -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        ご注文履歴
+                      </button>
+                    </h5>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body orderCard-outer">
+                        <p class="no-order">ご注文履歴がありません</p>    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ログアウトセクション -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        ログアウト
+                      </button>
+                    </h5>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <p>
+                          <a href="#" class="logout-text">ログアウト</a>する
+                        </p>
+                        <div class="error-text"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 退会セクション -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        退会
+                      </button>
+                    </h5>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <p>
+                          <a href="#" class="delete-text">退会</a
+                          >する
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 退会確認ダイアログ -->
+      <div
+        class="modal fade"
+        id="deleteAccountModal"
+        tabindex="-1"
+        aria-labelledby="deleteAccountModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteAccountModalLabel">退会確認</h5>
+            </div>
+            <div class="modal-body">
+              本当に退会しますか？この操作は元に戻せません。
+              <div class="error-text"></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                いいえ
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                id="confirmDeleteBtn"
+              >
+                はい
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+
+      <div class="newsletter">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center"
+              >
+                <h4>Newsletter</h4>
+                <p>
+                  Subscribe to our newsletter and get 20% off your first
+                  purchase
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <form action="post">
+                <div
+                  class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center"
+                >
+                  <input
+                    id="newsletter_email"
+                    type="email"
+                    placeholder="Your email"
+                    required="required"
+                    data-error="Valid email is required."
+                  />
+                  <button
+                    id="newsletter_submit"
+                    type="submit"
+                    class="newsletter_submit_btn trans_300"
+                    value="Submit"
+                  >
+                    subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="../js/user.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"8f5f06c48d4dd4b3","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.5","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

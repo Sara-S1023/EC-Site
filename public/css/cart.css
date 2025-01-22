@@ -1,0 +1,93 @@
+.title {
+  margin-top: 140px;
+  text-align: center;
+  color: gray;
+}
+
+.item-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-name {
+  cursor: pointer;
+}
+
+.card-name:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+.cart-outer {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  min-height: 350px;
+}
+
+.delete-product {
+  margin-top: 15px;
+  color: #fe4c50;
+}
+
+.delete-product {
+  cursor: pointer;
+}
+
+.delete-product:hover {
+  text-decoration: underline;
+}
+
+.item-price,
+.item-color,
+.item-size {
+  display: inline;
+  margin-right: 3%;
+}
+
+.item-num,
+.form-select {
+  margin-top: 10px;
+  display: inline;
+}
+
+.total-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.same-row {
+  margin-bottom: 5px;
+}
+
+.same-row * {
+  display: inline;
+}
+
+.right-text {
+  float: right;
+}
+
+.check-outer {
+  margin-top: 50px;
+}
+
+.checkBtn-outer {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+
+.checkBtn {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.hidden {
+  display: none;
+}
+
+.noItem-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: large;
+}

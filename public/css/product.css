@@ -1,0 +1,36 @@
+.product-outer {
+  margin-top: 120px;
+}
+
+.margin-section {
+  margin-top: 30px;
+}
+
+.sizeBtn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btnText {
+  margin: 2px 18px;
+}
+
+.addBtn {
+  width: 100%;
+}
+
+.addBtn:disabled {
+  background-color: #f17682;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.alert-selectSize {
+  color: #fe4c50;
+}
+
+.alert-noItem {
+  color: #fe4c50;
+}
