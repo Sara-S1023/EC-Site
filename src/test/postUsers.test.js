@@ -28,6 +28,8 @@ describe("POST /api/users", () => {
       .expect(500);
 
     expect(response.status).toBe(500);
-    expect(response.body.error).toBe("データベースエラーが発生しました");
+    expect(response.body.error).toBe(
+      "ユーザー情報の更新に失敗しました。後ほど再試行してください。"
+    );
   });
 });

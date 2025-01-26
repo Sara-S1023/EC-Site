@@ -492,6 +492,19 @@ jQuery(document).ready(function ($) {
       } else if ($("#gender").val() === "female") {
         gender = "F";
       }
+
+      const postPattern = /^\d{3}-\d{4}$/;
+      if (!postPattern.test($("#postalCode").val())) {
+        const error_text = `
+            <p>郵便番号は「〇〇〇-〇〇〇〇」の形式で入力してください。</p>`;
+        if ($(".updateError-text").children().length === 0) {
+          $(".updateError-text").append(error_text);
+        } else {
+          $(".updateError-text").find("p").text(error_text);
+        }
+        return;
+      }
+
       const userData = {
         email: $("#email").val(),
         address: $("#postalCode").val() + "," + $("#address").val(),
@@ -506,14 +519,19 @@ jQuery(document).ready(function ($) {
         },
         body: JSON.stringify(userData), // 送信するデータをJSONに変換
       })
-        .then((response) => {
-          if (!response.ok) {
-            // レスポンスが正常でない場合のエラーハンドリング
-            throw new Error("Network response was not ok");
-          }
-          return response.json(); // レスポンスをJSONとして処理
-        })
+        .then((response) => response.json())
         .then((data) => {
+          if (data.error) {
+            if ($(".updateError-text").children().length === 0) {
+              const error_text =
+                `
+                  <p>` +
+                data.error +
+                `</p>`;
+              $(".updateError-text").append(error_text);
+            }
+            return;
+          }
           console.log("登録成功:", data);
           // 必要な処理をここに追加（例：画面の更新や通知）
         })
@@ -530,27 +548,21 @@ jQuery(document).ready(function ($) {
         method: "POST", // POSTメソッドを使用
         credentials: "include", // クッキーをリクエストに含める
       })
-        .then((response) => {
-          if (!response.ok) {
-            // HTTPステータスが200番台以外の場合にエラーメッセージを表示
-            if ($(".error-text").children().length === 0) {
-              const error_text =
-                `
-                <p>` +
-                response.error +
-                `</p>`;
-              $(".error-text").append(error_text);
-            }
-
-            return Promise.reject("ログアウト処理に失敗しました。");
-          }
-          return response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           if (data.redirectTo) {
             // ログアウト成功時に指定されたURLにリダイレクト
             window.location.href = data.redirectTo;
           } else {
+            // HTTPステータスが200番台以外の場合にエラーメッセージを表示
+            if ($(".logoutError-text").children().length === 0) {
+              const error_text =
+                `
+                  <p>` +
+                data.error +
+                `</p>`;
+              $(".logoutError-text").append(error_text);
+            }
             console.error("リダイレクトURLが取得できませんでした。");
           }
         })
@@ -588,16 +600,16 @@ jQuery(document).ready(function ($) {
               // 退会成功後に指定されたURLにリダイレクト
               window.location.href = data.redirectTo;
             } else {
-              if ($(".error-text").children().length === 0) {
+              if ($(".deleteError-text").children().length === 0) {
                 const error_text =
                   `
                 <p>` +
                   data.error +
                   `</p>`;
-                $(".error-text").append(error_text);
+                $(".deleteError-text").append(error_text);
                 console.error("退会処理に失敗しました");
               } else {
-                $(".error-text").find("p").text(data.error);
+                $(".deleteError-text").find("p").text(data.error);
               }
             }
           })

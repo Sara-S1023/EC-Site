@@ -22,6 +22,7 @@ jQuery(document).ready(function ($) {
   initFavorite();
   initFixProductBorder();
   initSlider();
+  initCart();
   setEvents();
 
   /* 
@@ -294,6 +295,19 @@ jQuery(document).ready(function ($) {
     }
   }
 
+  function initCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length !== 0) {
+      const numIcon =
+        `
+        <span id="checkout_items" class="checkout_items">` +
+        cart.length +
+        `</span>`;
+      $(".fa-shopping-cart").after(numIcon);
+    }
+  }
+
   function setEvents() {
     $(".api-link").on("click", async function (event) {
       const isLoggedIn = await fetchSession();
@@ -313,6 +327,7 @@ jQuery(document).ready(function ($) {
       const name = $('[name="name"]').val();
       const email = $('[name="email"]').val();
       const password = $('[name="password"]').val();
+      const confirm_password = $('[name="confirm-password"]').val();
 
       fetch("http://100.64.1.100:8080/api/register", {
         method: "post",
@@ -324,6 +339,7 @@ jQuery(document).ready(function ($) {
           name: name,
           email: email,
           password: password,
+          confirm_password: confirm_password,
         }),
       })
         .then((response) => response.json())

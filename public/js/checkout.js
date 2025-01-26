@@ -454,6 +454,47 @@ jQuery(document).ready(function ($) {
         return;
       }
 
+      const kanjiPattern = /^[\u4e00-\u9faf\u3040-\u309f\u30a0-\u30ff]+$/;
+      if (
+        !kanjiPattern.test(firstName_kanji) ||
+        !kanjiPattern.test(lastName_kanji)
+      ) {
+        $(".error-text").text(
+          "姓名欄は漢字、ひらがなまたはカタカナで入力してください。"
+        );
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
+      const kanaPattern = /^[\u30A0-\u30FF]+$/;
+      if (
+        !kanaPattern.test(firstName_kana) ||
+        !kanaPattern.test(lastName_kana)
+      ) {
+        $(".error-text").text("セイメイ欄はカタカナで入力してください。");
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
+      const emailPattern =
+        /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
+      if (!emailPattern.test(shipping_email)) {
+        $(".error-text").text(
+          "不正なメールアドレスの形式です。再度確認してください。"
+        );
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
+      const postPattern = /^\d{3}-\d{4}$/;
+      if (!postPattern.test(post_number)) {
+        $(".error-text").text(
+          "郵便番号は「〇〇〇-〇〇〇〇」の形式で入力してください。"
+        );
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
       if (
         payment === "credit" &&
         ($("#cc-name").val().length === 0 ||
@@ -463,6 +504,30 @@ jQuery(document).ready(function ($) {
       ) {
         $(".error-text").text(
           "未入力の項目があります。ご確認のうえ、もう一度やり直してください。"
+        );
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
+      const ccNumberPattern = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+      if (
+        payment === "credit" &&
+        !ccNumberPattern.test($("#cc-number").val())
+      ) {
+        $(".error-text").text(
+          "カード番号は「〇〇〇〇-〇〇〇〇-〇〇〇〇-〇〇〇〇」の形式で入力してください。"
+        );
+        $(".error-text").removeClass("hidden");
+        return;
+      }
+
+      const ccExpiration = /^(0[1-9]|1[0-2])\/\d{2}$/;
+      if (
+        payment === "credit" &&
+        !ccExpiration.test($("#cc-expiration").val())
+      ) {
+        $(".error-text").text(
+          "カードの有効期限は「MM/YY」の形式で入力してください。"
         );
         $(".error-text").removeClass("hidden");
         return;

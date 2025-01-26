@@ -4,10 +4,26 @@ const db = require("../config/db"); // db.js をインポート
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, confirm_password } = req.body;
+  const pattern =
+    /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
 
   if (!name || !email || !password) {
     return res.status(400).json({ error: "すべての項目を入力してください。" });
+  }
+
+  if (!pattern.test(email)) {
+    /*パターンにマッチした場合*/
+    return res.status(400).json({
+      error: "不正なメールアドレスの形式です。再度確認してください。",
+    });
+  }
+
+  if (String(password) !== String(confirm_password)) {
+    return res.status(400).json({
+      error:
+        "パスワードと確認用パスワードが一致しません。再度確認してください。",
+    });
   }
 
   try {

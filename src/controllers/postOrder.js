@@ -34,7 +34,6 @@ router.post("/order", (req, res) => {
               });
             });
           }
-          console.log(guestEmail);
 
           // ゲストユーザーが作成されたら、注文処理を続行
           const insertOrderQuery = `

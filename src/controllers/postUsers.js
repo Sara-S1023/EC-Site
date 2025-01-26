@@ -9,7 +9,9 @@ router.post("/users", (req, res) => {
   db.query(query, [address, gender, birthdate, email], (err, results) => {
     if (err) {
       console.error("データベースエラー:", err);
-      res.status(500).json({ error: "データベースエラーが発生しました" });
+      res.status(500).json({
+        error: "ユーザー情報の更新に失敗しました。後ほど再試行してください。",
+      });
       return;
     }
     res.status(200).json(results); // 結果をJSON形式で返す
