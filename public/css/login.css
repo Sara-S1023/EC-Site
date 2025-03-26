@@ -1,0 +1,87 @@
+/* 全体のスタイル */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ログインフォームのコンテナ */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 300px;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.textbox {
+  margin-bottom: 20px;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.textbox input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #fe4c50;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  background-color: #f5888a;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #555;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #fe4c50;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.error-text > p {
+  color: #fe4c50;
+}

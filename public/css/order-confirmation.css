@@ -1,0 +1,75 @@
+/* 基本スタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thanx-container {
+  width: 90%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 140px;
+  min-height: 400px;
+}
+
+.content {
+  text-align: center;
+}
+
+.backHome-outer {
+  text-align: right;
+}
+
+.backHome {
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.backHome > p:hover {
+  color: #fe4c50;
+  text-decoration: underline;
+}
+
+.message h2 {
+  color: #fe4c50;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 18px;
+  color: #555;
+}
+
+.illustration-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.thank-you-message p {
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* スマートフォン用のレスポンシブ対応 */
+@media (max-width: 600px) {
+  .message h1 {
+    font-size: 28px;
+  }
+
+  .message p {
+    font-size: 16px;
+  }
+
+  .thank-you-message p {
+    font-size: 16px;
+  }
+}
